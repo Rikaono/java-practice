@@ -21,8 +21,20 @@ public class Qes1_13 {
         char c;         // 1文字を表すchar型
         String str;     // 文字列型
         boolean bool;   // 真偽値型
+        
+        
+     // Q2: 変数に型の初期値を代入
+        b = 0;
+        s = 0;
+        i = 0;
+        l = 0L;
+        f = 0.0f;
+        d = 0.0;
+        c = '\u0000';
+        str = null;
+        bool = false;
 
-        // 問題2：変数に値を代入（初期化）
+        // 変数に値を代入
         b = 10;                     // byteに10を代入
         s = 100;                    // shortに100を代入
         i = 1000;                   // intに1000を代入
@@ -99,9 +111,8 @@ public class Qes1_13 {
         // 問題7：BMIの計算と出力
         double heightInMeters = height / 100;              // 身長をm単位に変換
         double bmi = weight / (heightInMeters * heightInMeters); // BMIを計算（体重 ÷ 身長²）
-        System.out.println("BMIは" + String.format("%.2f", bmi) + "です"); // 小数第2位まで表示
+        System.out.println("BMIは" + String.format("%.1f", bmi) + "です");// 小数第2位まで表示
 
-        System.out.println("BMIは" + bmi + "です");         // BMIを出力
 
         // 改行（見やすくするため）
         System.out.println();
@@ -113,47 +124,47 @@ public class Qes1_13 {
         weight = 64.2;                                     // 体重を更新
         food = "オムライス";                                // 好きな食べ物を更新
 
+     // 同じ変数 bmi に再代入
+        bmi = weight / ((height / 100) * (height / 100));
+        
         System.out.println("初めまして" + name + "です");     // 自己紹介文を出力
         System.out.println("年齢は" + age + "歳です");        // 年齢を出力
         System.out.println("身長は" + height + "cmです");     // 身長を出力
         System.out.println("体重は" + weight + "kgです");     // 体重を出力
-        System.out.println("好きな食べ物は" + food + "です"); // 好きな食べ物を出力
-        System.out.println("BMIは" + bmi + "です");         // BMIを出力
-        System.out.println("BMIは" + String.format("%.2f", bmi) + "です"); // 小数第2位まで表示
+        System.out.println("BMIは" + String.format("%.1f", bmi) + "です");        // BMIを出力
         
         // 改行（見やすくするため）
         System.out.println();
 
         // 問題9：年齢・身長・体重を和算して代入、自己紹介文の出力
-        int newAge = age + 24;                                  // 年齢の和
-        double newHeight = height + 168.5;                      // 身長の和
-        double newWeight = weight + 64.2;                       // 体重の和
+        age += 24;
+        height += 168.5;
+        weight += 64.2;
 
-        System.out.println("初めまして鈴木一郎です");             // 自己紹介文出力
-        System.out.println("年齢は" + newAge + "歳です");         // 和算された年齢
-        System.out.println("身長は" + newHeight + "cmです");      // 和算された身長
-        System.out.println("体重は" + newWeight + "kgです");      // 和算された体重
-        System.out.println("好きな食べ物はオムライスです");       // 好きな食べ物はそのまま
+     // 同じ変数 bmi に再代入
+        bmi = weight / ((height / 100) * (height / 100));
 
-        double newHeightM = newHeight / 100;                    // m単位に変換
-        double newBmi = newWeight / (newHeightM * newHeightM);  // BMI計算
-        System.out.println("BMIは" + newBmi + "です");           // BMI出力
-        System.out.println("BMIは" + String.format("%.2f", bmi) + "です"); // 小数第2位まで表示
-
+        System.out.println("初めまして鈴木一郎です");
+        System.out.println("年齢は" + age + "歳です");
+        System.out.println("身長は" + height + "cmです");
+        System.out.println("体重は" + weight + "kgです");
+        System.out.println("好きな食べ物は" + food + "です");
+        System.out.println("BMIは" + String.format("%.1f", bmi) + "です"); // 最新のBMIで出力
+        
         // 改行
         System.out.println();
 
         // 問題10：年齢が25歳以上かの判定（if文を使わない）
-        boolean isOver25 = newAge >= 25;                         // 25歳以上か判定
+        boolean isOver25 = age >= 25;                         // 25歳以上か判定
         System.out.println(isOver25);                            // trueまたはfalseを出力
 
         // 改行
         System.out.println();
 
         // 問題11：年齢・身長・体重を文字列に変換して連結して出力
-        String ageStr = String.valueOf(newAge);                  // 年齢を文字列に変換
-        String heightStr = String.valueOf(newHeight);            // 身長を文字列に変換
-        String weightStr = String.valueOf(newWeight);            // 体重を文字列に変換
+        String ageStr = String.valueOf(age);                  // 年齢を文字列に変換
+        String heightStr = String.valueOf(height);            // 身長を文字列に変換
+        String weightStr = String.valueOf(weight);            // 体重を文字列に変換
         System.out.println("年齢：" + ageStr + " 身長：" + heightStr + " 体重：" + weightStr);
 
         // 改行
