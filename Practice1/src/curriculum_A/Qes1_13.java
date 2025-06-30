@@ -20,8 +20,7 @@ public class Qes1_13 {
         double d;       // double型の変数
         char c;         // 1文字を表すchar型
         String str;     // 文字列型
-        boolean bool;   // 真偽値型
-        
+        boolean bool;   // 真偽値型    
         
      // Q2: 変数に型の初期値を代入
         b = 0;
