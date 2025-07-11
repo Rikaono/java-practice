@@ -3,17 +3,17 @@ import java.util.Random;
 
 public class Curriculum_New_1_18 {
 
-		    // Q1
+		    // Q1：文字列と整数を受け取り、連結して出力するメソッド
 		    public static void printMessage(String message, int version) {
 		        System.out.println(message + " " + version);
 		    }
 
-		    // Q2
+		    // Q2：2つの整数を掛け算して結果を出力するメソッド
 		    public static void multiply(int a, int b) {
 		        System.out.println("乗算結果: " + (a * b));
 		    }
 
-		    // Q3
+		    // Q3：渡された整数配列を1つずつ順に出力するメソッド
 		    public static void printArray(int[] numbers) {
 		        System.out.print("配列の内容: ");
 		        for (int num : numbers) {
@@ -22,7 +22,7 @@ public class Curriculum_New_1_18 {
 		        System.out.println();
 		    }
 
-		    // Q4（オーバーロード）
+		    // Q4
 		    public static void add(double a, double b) {
 		        System.out.println("小数の和: " + (a + b));
 		    }
